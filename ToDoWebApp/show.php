@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['user'])) {
-    // Si l'utilisateur n'est pas connecté, redirigez-le vers la page de connexion
+  
     header('Location: login.php');
     exit();
 }
@@ -45,19 +45,19 @@ $res = $conn->query($s);
 	<style type="text/css">
 .grad1 {
     height: 200px;
-    background: red; /* For background: rowsers that do not support gradients */
-    background: -webkit-linear-gradient(red, yellow); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(red, yellow); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(red, yellow); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(red, yellow); /* Standard syntax (must be last) */
+    background: red; 
+    background: -webkit-linear-gradient(red, yellow);
+    background: -o-linear-gradient(red, yellow); 
+    background: -moz-linear-gradient(red, yellow); 
+    background: linear-gradient(red, yellow); 
 }
 .grad1 {
     height: 200px;
-    background: yellow; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient( yellow,red); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient( yellow,red); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(yellow,red); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(yellow,red); /* Standard syntax (must be last) */
+    background: yellow; 
+    background: -webkit-linear-gradient( yellow,red);
+    background: -o-linear-gradient( yellow,red); 
+    background: -moz-linear-gradient(yellow,red); 
+    background: linear-gradient(yellow,red); 
 }
 #myfirst_div{
 	display: block;
@@ -95,9 +95,8 @@ padding:120px;
 </head>
 <body>
 
-<!-- En-tête -->
 <div class="container">
-    <h1>Bienvenue, <?php echo $_SESSION['user']; ?></h1>
+    <h1>Bienvenue  <?php echo $_SESSION['user']; ?>Sur MyToDo-List</h1>
     <a href="logout.php" class="btn btn-danger">Déconnexion</a>
     <br><br>
 </div>

@@ -2,7 +2,7 @@
 include('conn.php');
 session_start();
 
-// Redirection vers la page d'inscription
+
 if(isset($_REQUEST['signUP'])) {
     ?>
     <script type="text/javascript">
@@ -11,33 +11,30 @@ if(isset($_REQUEST['signUP'])) {
     <?php
 }
 
-// Traitement de la connexion
+
 if(isset($_REQUEST['login'])) {
     $user = $_REQUEST['user'];
     $pass = $_REQUEST['pass'];
 
-    // Vérifier l'utilisateur et le mot de passe
     $lgn = "SELECT * FROM reg WHERE user='$user' AND pass='$pass'";
     $reg = $conn->query($lgn);
     $chk = $reg->num_rows;
 
     if($chk == 1) {
-        $_SESSION['user'] = $user; // Enregistrer l'utilisateur dans la session
-
-        // Redirection vers la page d'accueil ou une page protégée
+        $_SESSION['user'] = $user; 
         ?>
         <script type="text/javascript">
             alert('Login success');
-            window.location = "show.php";  // Redirige vers une page protégée après la connexion
+            window.location = "show.php";  
         </script>
         <?php
-        exit();  // S'assurer que le script s'arrête après la redirection
+        exit();  
     } else {
-        // Si les informations de connexion sont incorrectes
+     
         ?>
         <script type="text/javascript">
             alert('Login not successful');
-            window.location = "login.php";  // Reste sur la page de connexion
+            window.location = "login.php";  
         </script>
         <?php
     }

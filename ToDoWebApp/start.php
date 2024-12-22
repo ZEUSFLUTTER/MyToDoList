@@ -129,13 +129,12 @@ padding:120px;
 
 	
 </style>
-	<!-- Latest compiled and minified CSS -->
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-<!-- Latest compiled and minified JavaScript -->
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
@@ -154,7 +153,7 @@ function startTime() {
 }
 
 function checkTime(i) {
-    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    if (i < 10) {i = "0" + i};  
     return i;
 }
 
@@ -222,7 +221,7 @@ function checkTime(i) {
 <script>
     	function confirmDelete(link) {
         if (confirm("Are you sure?")) {
-            doAjax(link.href, "POST"); // doAjax needs to send the "confirm" field
+            doAjax(link.href, "POST"); 
         }
         return false;
     		}
@@ -230,7 +229,7 @@ function checkTime(i) {
 
 	var i = 0;
 
-// Update the count down every 1 second
+
 var x = setInterval(function() {
 
 
