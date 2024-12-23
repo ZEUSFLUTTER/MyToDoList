@@ -42,61 +42,144 @@ $res = $conn->query($s);
     <meta charset="UTF-8">
     <title>Liste de tâches</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 	<style type="text/css">
-.grad1 {
-    height: 200px;
-    background: red; 
-    background: -webkit-linear-gradient(red, yellow);
-    background: -o-linear-gradient(red, yellow); 
-    background: -moz-linear-gradient(red, yellow); 
-    background: linear-gradient(red, yellow); 
-}
-.grad1 {
-    height: 200px;
-    background: yellow; 
-    background: -webkit-linear-gradient( yellow,red);
-    background: -o-linear-gradient( yellow,red); 
-    background: -moz-linear-gradient(yellow,red); 
-    background: linear-gradient(yellow,red); 
-}
-#myfirst_div{
-	display: block;
-background-color: #99ff66;
-margin: 0px;
-padding: 90px;	
 
+/* Fond d'écran */
+body {
+    background-image: url(discipine.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: Arial, sans-serif;
 }
-#second_div{
-	display: block;
-background-color: #ff3300;
-margin: 0px;
-padding:120px;	
 
+h1 {
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    margin-top: 30px;
 }
+
 .navbar-brand {
-  float: left;
-  height: 50px;
-  padding: 15px 15px;
-  font-size: 18px;
-  line-height: 20px;
-}
-.third_div{
-
+    color: white !important;
+    font-size: 20px;
 }
 
-#abc{
-
-	text-align: left;
-  	font-size: 28px;
+.container {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px auto;
 }
-	
+
+table {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: white;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #444;
+}
+
+table th {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ffcc00;
+}
+
+table td {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+tr.info {
+    background-color: rgba(0, 255, 255, 0.3);
+    color: black;
+}
+
+tr.success {
+    background-color: rgba(0, 255, 0, 0.3);
+    color: black;
+}
+
+tr.warning {
+    background-color: rgba(255, 255, 0, 0.3);
+    color: black;
+}
+
+tr.danger {
+    background-color: rgba(255, 0, 0, 0.3);
+    color: white;
+}
+
+button, .btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: #0056b3;
+}
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #444;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    outline: none;
+}
+
+#myfirst_div, #second_div {
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 20px 0;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.alert {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.third_div {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#abc {
+    text-align: left;
+    font-size: 28px;
+}
+
+
 
 </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Bienvenue  <?php echo $_SESSION['user']; ?>Sur MyToDo-List</h1>
+    <h1>Bienvenue  <?php echo $_SESSION['user']; ?> Sur MyToDo-List Journalier</h1>
     <a href="logout.php" class="btn btn-danger">Déconnexion</a>
     <br><br>
 </div>
