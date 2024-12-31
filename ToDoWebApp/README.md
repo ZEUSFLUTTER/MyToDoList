@@ -1,5 +1,5 @@
 # ToDO Web App
-
+<!-- voici les informations à avoir dans qa base de donnés -->
 CREATE DATABASE todo;
 USE todo;
 CREATE TABLE reg (
